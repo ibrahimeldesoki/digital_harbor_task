@@ -6,6 +6,14 @@
         <i class="fas fa-plus"></i> {{ "Add New Product" }}
     </a>
 </div>
+@if ($message = Session::get('success'))
+<div class="alert alert-success" role="alert">
+      <strong>{{ $message }}</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+</div>
+@endif
 <table id="products" class="display" style="width:100%">
     <thead>
         <tr>
