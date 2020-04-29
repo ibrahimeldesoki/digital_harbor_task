@@ -1,0 +1,18 @@
+.list-item{
+    list-style:none;
+    padding: 10px;
+}
+.contain{
+    margin: 0 200px 200px 200px;
+    min-height:620px ;
+}
+td,th,header,footer{
+    text-align: center;
+}
+.add_new{
+    margin-bottom: 20px;
+}
+header{
+    margin-bottom: 50px;
+}
+
