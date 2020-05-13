@@ -12,14 +12,17 @@ class Category extends Model
     public static function boot()
     {
         parent::boot();
+
         self::deleting(function (Category $category){
-            foreach ($category->products as $product){
-                $product->delete() ;
-            }
+            $category->products()->delete();
         }) ;
     }
     public function products()
     {
         return $this->hasMany('App\Product');
+    }
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
     }
 }

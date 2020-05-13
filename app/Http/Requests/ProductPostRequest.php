@@ -23,7 +23,7 @@ class ProductPostRequest extends FormRequest
      */
     public function rules()
     {
-
+    dd(request()->all());
         return [
             'name'=> 'string|required',
             'description' => 'nullable',

@@ -38,6 +38,7 @@ class ProductController extends Controller
      */
     public function store(ProductPostRequest $request)
     {
+
         Product::create($request->all());
         session()->flash('success', "Product Added Sucessfully");
 
